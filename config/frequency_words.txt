@@ -149,78 +149,13 @@
 
 [WORD_GROUPS]
 
-# ═══════════════════════════════════════════════════════════════
-#                         企业与品牌
-# ═══════════════════════════════════════════════════════════════
-
-/胖东来|于东来/ => 胖东来
-
-/深度求索|幻方量化|梁文锋|\bDeepSeek\b/ => DeepSeek
-
-/华为|任正非|余承东|鸿蒙|海思|昇腾|鲲鹏|\bHUAWEI\b|\bHarmonyOS\b|\bHiSilicon\b/ => 华为
-
-/比亚迪|王传福|方程豹|腾势|仰望|弗迪|刀片电池|云辇|\bBYD\b|\bDenza\b|\bYangwang\b/ => 比亚迪
-
-/大疆|汪滔|灵眸|如影|\bDJI\b|\bRoboMaster\b|\bMavic\b|\bZenmuse\b/ => 大疆
-
-/宇树|王兴兴|\bUnitree\b/ => 宇树机器人
-
-/智元|灵犀|稚晖君|彭志辉|AgiBot/ => 智元机器人
-/众擎|EngineAI|赵同阳/ => 众擎机器人
-
-/黑神话|冯骥/ => 黑神话悟空
-
-/影之刃零|梁其伟/ => 影之刃零
-
-/三体|流浪地球|刘慈欣|郭帆/ => 三体/流浪地球
-
-申奥
-
-/京东|刘强东|\bJD\b|\bJingdong\b/ => 京东
-
-/字节|张一鸣|梁汝波|抖音|\bByteDance\b|\bTikTok\b|\bDouyin\b|\bLark\b|\bCapCut\b/ => 字节跳动
-
-/腾讯|鹅厂|马化腾|微信|QQ|天美|阅文集团|微众银行|\bTencent\b|\bPony Ma\b|\bWeChat\b|\bLightSpeed\b|\bWeBank\b/ => 腾讯
-
-/qwen|minimax|glm/ => 国产开源模型
-
-/特斯拉|马斯克|\bTesla\b|\bElon Musk\b|\bCybertruck\b|\bModel 3\b|\bModel Y\b|\bModel S\b|\bModel X\b|\bFSD\b/ => 特斯拉
-
-/英伟达|黄仁勋|\bNVIDIA\b|\bGeForce\b|\bRTX\b|\bCUDA\b|\bJensen Huang\b/ => 英伟达
-/苏姿丰|锐龙|霄龙|\bAMD\b|\bRyzen\b|\bEPYC\b|\bRadeon\b|\bLisa Su\b/ => AMD
-
-/微软|\bMicrosoft\b|\bWindows\b|\bAzure\b|\bSatya Nadella\b|\bCopilot\b/ => 微软
-/谷歌|皮查伊|安卓|油管|\bGoogle\b|\bAlphabet\b|\bAndroid\b|\bChrome\b|\bYouTube\b|\bGemini\b|\bDeepMind\b|\bWaymo\b/ => 谷歌
-/库克|\biPhone\b|\biPad\b|\bMacBook\b|\biOS\b|\bVision Pro\b|\bAirPods\b|\bApple\b|\bTim Cook\b/ => 苹果
-
-/\bOpenAI\b|\bChatGPT\b|\bSora\b|\bDALL-E\b|\bSam Altman\b|\bGreg Brockman\b/ => OpenAI
-/\bAnthropic\b|\bClaude\b|\bDario Amodei\b/ => Claude
-
 
 # ═══════════════════════════════════════════════════════════════
-#                         国家与地区
+#                         贵金属领域
 # ═══════════════════════════════════════════════════════════════
-
-[中国]
-国产
-中国
-
-[东亚]
-日本
-朝鲜
-韩国
-
-[北美]
-美国
-加拿大
-
-[西欧]
-法国
-英国
-
-/俄罗斯|俄国/ => 俄罗斯
-
-印度
+[贵金属相关]
+/(?i)黄金|白银|铂金|钯金|铑金|钌金|铱金|锇金|贵金属|金价|银价|铂价|钯价|现货金|现货银|期金|期银|伦敦金|伦敦银|纽约金|纽约银|上海金|上海银|Comex黄金|Comex白银|LBMA|金银|金矿|银矿|铂矿|钯矿|金条|银条|铂条|钯条|金币|银币|铂币|钯币|金饰|银饰|铂饰|钯饰|\bGold\b|\bSilver\b|\bPlatinum\b|\bPalladium\b|\bRhodium\b|\bRuthenium\b|\bIridium\b|\bOsmium\b|\bPrecious\s+Metals\b|\bXAU\b|\bXAG\b|\bXPT\b|\bXPD\b|\bComex\b|\bNYMEX\b|\bLBMA\b|\bSGE\b|\bGC\b|\bSI\b|\bPL\b|\bPA\b/
+@5
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -230,29 +165,53 @@
 [AI 相关]
 /(?<![a-zA-Z])ai(?![a-zA-Z])/
 人工智能
+AI
+/OpenAI|DeepMind|Anthropic|xAI|\bOpenAI\b|\bDeepMind\b|\bAnthropic\b|\bxAI\b|\bGemini\b|\bClaude\b|\bGrok\b|\bLlama\b|\bCopilot\b|\bChatGPT\b|\bDALL·E\b|\bSora\b|\bAlphaFold\b|\bGemma\b|\bQwen\b|智谱|文心一言|通义千问|盘古|混元|商量|日日新|书生|紫东太初|星火|天禧|仇肖莘|任旭阳/
+@5
+# ═══════════════════════════════════════════════════════════════
+#                         全网热搜
+# ═══════════════════════════════════════════════════════════════
 
-[芯片]
-芯片
-光刻机
-半导体
+[全网热搜相关]
+/热搜|热搜榜|热搜话题|微博热搜|百度热搜|抖音热搜|头条热搜|热搜第一|热搜排名/
+@5
 
-/水电|雅鲁藏布江/ => 水电
-/光伏|太阳能/ => 光伏
-核能
-能源
+# ═══════════════════════════════════════════════════════════════
+#                         黄金诈骗案例
+# ═══════════════════════════════════════════════════════════════
+[黄金诈骗/假货案例]
+# 普通关键词（直接匹配）
+黄金诈骗
+黄金假货
+假黄金
+金条造假
+黄金掺假
+黄金骗局
+黄金欺诈
+越南沙金
+泰国沙金
+印度金
+镀金
+包金
+鎏金
+厚金
+仿真金
+金包银
+金包铜
+合金金
+老金不纯
+沙金
+空心厚壁
+掺铱
+掺钨
+金包
+金掺
+铼
 
-/自动驾驶|无人驾驶|智驾/ => 自动驾驶
+# ═══════════════════════════════════════════════════════════════
+#                         虚拟货币
+# ═══════════════════════════════════════════════════════════════
 
-机器人
-/机械狗|四足/ => 机器狗
-具身智能
-
-/月球|登月|火星|宇宙|飞船|航天|空间站|卫星/ => 航天
-
-# 前沿科技
-量子
-脑机
-基因
-
-# 产业政策
-生产力
+[虚拟货币]
+/比特币|比特幣|以太坊|泰达币|币安币|\bBitcoin\b|\bBTC\b|\bEthereum\b|\bETH\b|\bTether\b|\bUSDT\b|\bBinance Coin\b|\bBNB\b|\bSolana\b|\bSOL\b|\bXRP\b|\bCardano\b|\bADA\b|\bDogecoin\b|\bDOGE\b|\bPolkadot\b|\bDOT\b|\bLitecoin\b|\bLTC\b|币安|Binance|\bCoinbase\b|火币|Huobi|OKX|比特大陆|Bitmain|\bCircle\b|\bRipple\b|MicroStrategy|\bGalaxy Digital\b|\bBlock\b|赵长鹏|\bCZ\b|孙宇晨|\bJustin Sun\b|Vitalik|比特币ETF|以太坊ETF|加密货币ETF|区块链ETF|\bUSDC\b|\bPYUSD\b|\bDAI\b|\bFDUSD\b|\bTUSD\b|\bBUSD\b|\bLINK\b|\bAAVE\b|\bUNI\b|\bSUSHI\b|\bCRV\b|\bTAO\b|\bHYPE\b|\bJUP\b|\bHNT\b|\bCELO\b|\bCRO\b|\bFTM\b|\bNEAR\b|\bAPT\b|\bSUI\b|\bSEI\b|\bTIA\b|\bWIF\b|\bPEPE\b|\bFLOKI\b|\bBONK\b|加密交易所|加密货币交易所|数字货币交易所|虚拟资产交易所|数字资产交易所|加密交易平台|数字货币交易平台|冷钱包|硬件钱包|\bLedger\b|\bTrezor\b|\bPhantom\b|\bMetaMask\b|公链|主网|\bLayer1\b|\bLayer2\b|\bDeFi\b|\bCeFi\b|\bGameFi\b|\bNFT\b|\bMeme币\b|\bMeme coin\b|铭文|符文|\bRunes\b|\bOrdinals\b|\bStaking\b|\bLending\b|\bBorrowing\b|\bLiquidity\b|\bAMM\b|\bDEX\b|\bCEX\b|\bOTC\b|\bKYC\b|\bAML\b|\bCBDC\b|\bRWA\b|\bWeb3\b|\bDApp\b|\bDAO\b|比特币减半|以太坊合并|上海升级|坎昆升级|比特币现货ETF|以太坊现货ETF|加密货币法规|数字资产监管|虚拟资产服务商|\bVASP\b|反洗钱|打击洗钱|恐怖分子资金募集|投资风险|价格波动|市场操纵|黑客攻击|安全漏洞|私钥|助记词|双重认证|钓鱼网站|庞氏骗局|资金盘|区块链分析|链上数据|加密货币钱包|数字资产托管|机构投资者|散户投资者|传统金融机构|合规交易所|持牌交易所|离岸交易所|去中心化金融|中心化金融|流动性挖矿|质押挖矿|数字货币借贷|加密支付|加密货币支付|数字货币支付|加密信用卡|加密货币信用卡|\bFATF\b|\bSEC\b|\bCFTC\b/
+@5
