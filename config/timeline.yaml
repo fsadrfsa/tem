@@ -266,8 +266,8 @@ presets:
         push: true                 # 有新增就推送
         report_mode: "incremental" # 增量模式：有新增才推，没有就安静
         once:
-          analyze:false           # 不限制分析次数
-          push:false              # 不限制推送次数
+          analyze: false           # 不限制分析次数
+          push: false              # 不限制推送次数
 
     # 工作日使用三段式推送；周末使用增量自由模式
     day_plans:
