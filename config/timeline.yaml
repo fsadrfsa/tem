@@ -9,7 +9,7 @@
 # 只需在 config.yaml 中选择一个预设模板即可：
 #
 #   schedule:
-#     preset: "morning_evening"    ← 改这里就行
+#     preset: "always_on"    ← 改这里就行
 #
 #
 # 可视化配置编辑器地址: https://sansan0.github.io/TrendRadar/
