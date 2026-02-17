@@ -55,8 +55,7 @@ schedule:
 platforms:
   enabled: true                         # 是否启用热榜平台抓取
   sources:
-     - id: "douyin"
-      name: "抖音"
+     
     - id: "baidu"
       name: "百度热搜"
     - id: "weibo"
