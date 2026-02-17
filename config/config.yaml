@@ -208,7 +208,7 @@ display:
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
-    standalone: false                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
+    standalone: true                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true                 # AI 分析区域
 
   # 📋 独立展示区配置
@@ -218,8 +218,8 @@ display:
   #   - AI 分析：由 ai.include_standalone 开关控制，将完整数据送入 AI 做深度分析
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
-    platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
+    platforms: ["zhihu","wallstreetcn-hot","weibo","github","coingecko","douyin","tieba","toutiao"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: ["ai-bing","gold-bing","tech-program-bing","global-news-bing","github-trending","github-awesome","hot-search-zhihu","hot-search-tencent"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
@@ -255,10 +255,10 @@ notification:
       webhook_url: ""                 # 飞书机器人 webhook URL
 
     dingtalk:
-      webhook_url: ""                 # 钉钉机器人 webhook URL
+      webhook_url: "${{ WEBHOOK_API }}"                 # 钉钉机器人 webhook URL
 
     wework:
-      webhook_url: ""                 # 企业微信机器人 webhook URL
+      webhook_url: "WEBHOOK_API"                 # 企业微信机器人 webhook URL
       msg_type: "markdown"            # 消息类型：markdown(群机器人) | text(个人微信应用)
 
     telegram:
@@ -353,9 +353,9 @@ ai:
   
   model: "deepseek/deepseek-chat"
 
-  api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
+  api_key: "${{ AI_API_KEY }}"                       # API Key（建议使用环境变量 AI_API_KEY）
   
-  api_base: ""                      # 自定义 API 端点（可选，大多数情况留空）
+  api_base: "https://api.deepseek.com/v1"                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
                                     #
                                     # 💡 超级重要：连接任意兼容 OpenAI 协议的模型商
