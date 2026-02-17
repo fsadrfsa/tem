@@ -55,26 +55,29 @@ schedule:
 platforms:
   enabled: true                         # 是否启用热榜平台抓取
   sources:
-    - id: "toutiao"
-      name: "今日头条"
+     - id: "douyin"
+      name: "抖音"
     - id: "baidu"
       name: "百度热搜"
-    - id: "wallstreetcn-hot"
-      name: "华尔街见闻"
-    - id: "thepaper"
-      name: "澎湃新闻"
-    - id: "bilibili-hot-search"
-      name: "bilibili 热搜"
-    - id: "cls-hot"
-      name: "财联社热门"
-    - id: "ifeng"
-      name: "凤凰网"
-    - id: "tieba"
-      name: "贴吧"
     - id: "weibo"
       name: "微博"
-    - id: "douyin"
-      name: "抖音"
+    - id: "tieba"
+      name: "贴吧"
+    - id: "toutiao"
+      name: "今日头条"
+    - id: "github"
+      name: "GitHub"
+      sort: "trending"  # 优先抓取GitHub趋势开源项目
+    - id: "jin10"
+      name: "金十数据"
+    - id: "thepaper"
+      name: "澎湃新闻"
+    - id: "ifeng"
+      name: "凤凰网"
+    - id: "cls-hot"
+      name: "财联社热门"
+    - id: "ithome"
+      name: "IT之家"
     - id: "zhihu"
       name: "知乎"
 
@@ -113,11 +116,73 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
+  # 1. 全网权威新闻类
+    - id: "ai-bing"
+      name: "必应AI新闻"
+      url: "https://www.bing.com/news/search?q=人工智能&format=RSS"
+      max_age_days: 1
+      # 国内替代链接：https://rsshub.app/zhihu/topic/19552832/hot
+    - id: "gold-bing"
+      name: "必应黄金走势新闻"
+      url: "https://www.bing.com/news/search?q=黄金价格+走势&format=RSS"
+      max_age_days: 1
+      # 国内替代链接：https://rsshub.app/jin10/news
+    - id: "tech-program-bing"
+      name: "必应科技编程新闻"
+      url: "https://www.bing.com/news/search?q=科技+编程&format=RSS"
+      # 国内替代链接：https://rsshub.app/ithome/tech
+    - id: "global-news-bing"
+      name: "必应全球新闻"
+      url: "https://www.bing.com/news/search?q=全球新闻&format=RSS"
+      # 无法访问时直接删除该节点
+    
+    # 扩展推荐RSS（含国内替代，适配重点方向）
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
       # max_age_days: 1               # 示例：只推送1天内的文章
+# AI类
+    - id: "ai-mit"
+      name: "麻省理工科技评论-AI专栏"
+      url: "https://www.technologyreview.com/topic/artificial-intelligence/feed/"
+      max_age_days: 2
+      # 国内替代链接：https://rsshub.app/mittechreview/topic/artificial-intelligence
+    - id: "ai-jiqizhixin"
+      name: "机器之心"
+      url: "https://www.jiqizhixin.com/rss"
+      max_age_days: 1  # 国内平台，无需代理
 
+    # 虚拟货币类（合规资讯，按需启用；仅收录行业快讯，不涉及交易指导）
+    - id: "crypto-coindesk"
+      name: "CoinDesk中文"
+      url: "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"
+      max_age_days: 1
+      # 国内替代链接：https://rsshub.app/coindesk/cn
+    - id: "crypto-cointelegraph"
+      name: "Cointelegraph中文"
+      url: "https://cn.cointelegraph.com/rss"
+      max_age_days: 1
+      # 国内替代链接：https://rsshub.app/cointelegraph/cn
+    
+    # GitHub优质开源项目类
+    - id: "github-trending"
+      name: "GitHub Trending 中文"
+      url: "https://rsshub.app/github/trending/zh-CN"
+      max_age_days: 1  # 修正失效链接，无需代理
+    - id: "github-awesome"
+      name: "Awesome系列合集"
+      url: "https://github.com/sindresorhus/awesome/commits.atom"
+      max_age_days: 7
+    
+    # 全网热搜补充类
+    - id: "hot-search-zhihu"
+      name: "知乎热搜"
+      url: "https://www.zhihu.com/rss/hot"
+      max_age_days: 1  # 标准RSS格式，无需代理
+    - id: "hot-search-tencent"
+      name: "腾讯新闻热搜"
+      url: "https://rsshub.app/tencentnews/hot"
+      max_age_days: 1  # 修正API接口错误，标准RSS格式
     - id: "ruanyifeng"
       name: "阮一峰的网络日志"
       url: "http://www.ruanyifeng.com/blog/atom.xml"
@@ -155,7 +220,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
@@ -258,7 +323,7 @@ notification:
       webhook_url: "${{ WEBHOOK_API }}"                 # 钉钉机器人 webhook URL
 
     wework:
-      webhook_url: "WEBHOOK_API"                 # 企业微信机器人 webhook URL
+      webhook_url: ""                 # 企业微信机器人 webhook URL
       msg_type: "markdown"            # 消息类型：markdown(群机器人) | text(个人微信应用)
 
     telegram:
@@ -330,7 +395,7 @@ storage:
   # 数据拉取配置（从远程同步到本地）
   # 用于 MCP Server 等场景：爬虫存到远程，MCP 拉取到本地分析
   pull:
-    enabled: false                    # 是否启用启动时自动拉取
+    enabled: true                    # 是否启用启动时自动拉取
     days: 7                           # 拉取最近 N 天的数据
 
 
@@ -374,11 +439,11 @@ ai:
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
   
-  max_tokens: 5000                  # 最大生成 token 数
+  max_tokens: 2000                  # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
   # 高级选项
   num_retries: 1                    # 失败重试次数
-  fallback_models: []               # 备用模型列表（可选）
+  fallback_models: ["deepseek-reasoner"]               # 备用模型列表（可选）
                                     # 示例: ["openai/gpt-4o-mini", "openai/deepseek-ai/DeepSeek-V3"]
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -443,7 +508,7 @@ ai_analysis:
                                       # GitHub Action 部署默认推送约 20 次（每小时推送一次）， 约 0.1 元/天
                                       # Docker 部署默认推送 48 次(每半小时推送一次)， 约 0.2 元/天
 
-  include_rss: false                # 是否包含 RSS 内容进行分析
+  include_rss: true                # 是否包含 RSS 内容进行分析
   
   include_standalone: true          # 是否将独立展示区数据纳入 AI 分析（只需上方 display 区的 standalone 配置了平台/RSS 即可）
 
@@ -462,7 +527,7 @@ ai_analysis:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_translation:
-  enabled: false                    # 是否启用翻译功能
+  enabled: true                    # 是否启用翻译功能
 
   # 翻译目标语言
   # 格式：自然语言描述
