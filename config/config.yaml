@@ -165,25 +165,13 @@ rss:
       max_age_days: 1
       # 国内替代链接：https://rsshub.app/cointelegraph/cn
     
-    # GitHub优质开源项目类
-    - id: "github-trending"
-      name: "GitHub Trending 中文"
-      url: "https://rsshub.app/github/trending/zh-CN"
-      max_age_days: 1  # 修正失效链接，无需代理
+    
     - id: "github-awesome"
       name: "Awesome系列合集"
       url: "https://github.com/sindresorhus/awesome/commits.atom"
       max_age_days: 7
     
-    # 全网热搜补充类
-    - id: "hot-search-zhihu"
-      name: "知乎热搜"
-      url: "https://www.zhihu.com/rss/hot"
-      max_age_days: 1  # 标准RSS格式，无需代理
-    - id: "hot-search-tencent"
-      name: "腾讯新闻热搜"
-      url: "https://rsshub.app/tencentnews/hot"
-      max_age_days: 1  # 修正API接口错误，标准RSS格式
+   
     - id: "ruanyifeng"
       name: "阮一峰的网络日志"
       url: "http://www.ruanyifeng.com/blog/atom.xml"
@@ -192,7 +180,7 @@ rss:
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
-      enabled: false                  # 禁用
+      enabled: true                  
 
     # 自定义源示例
     # - id: "custom-feed"
