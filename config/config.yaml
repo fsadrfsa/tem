@@ -319,7 +319,7 @@ notification:
       webhook_url: ""                 # 飞书机器人 webhook URL
 
     dingtalk:
-      webhook_url: "ENV_DINGTALK_WEBHOOK"                 # 钉钉机器人 webhook URL
+      webhook_url: "${{ WEBHOOK_API }}"                 # 钉钉机器人 webhook URL
 
     wework:
       webhook_url: ""                 # 企业微信机器人 webhook URL
