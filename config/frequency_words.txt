@@ -153,7 +153,6 @@
 # ═══════════════════════════════════════════════════════════════
 #                         贵金属领域
 # ═══════════════════════════════════════════════════════════════
-
 /(?i)黄金|白银|铂金|钯金|铑金|钌金|铱金|锇金|贵金属|金价|银价|铂价|钯价|现货金|现货银|期金|期银|伦敦金|伦敦银|纽约金|纽约银|上海金|上海银|Comex黄金|Comex白银|LBMA|金银|金矿|银矿|铂矿|钯矿|金条|银条|铂条|钯条|金币|银币|铂币|钯币|金饰|银饰|铂饰|钯饰|\bGold\b|\bSilver\b|\bPlatinum\b|\bPalladium\b|\bRhodium\b|\bRuthenium\b|\bIridium\b|\bOsmium\b|\bPrecious\s+Metals\b|\bXAU\b|\bXAG\b|\bXPT\b|\bXPD\b|\bComex\b|\bNYMEX\b|\bLBMA\b|\bSGE\b|\bGC\b|\bSI\b|\bPL\b|\bPA\b/ => 贵金属相关
 @5
 
