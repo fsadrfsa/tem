@@ -157,7 +157,14 @@
 /(?i)黄金|白银|铂金|钯金|铑金|钌金|铱金|锇金|贵金属|金价|银价|铂价|钯价|现货金|现货银|期金|期银|伦敦金|伦敦银|纽约金|纽约银|上海金|上海银|Comex黄金|Comex白银|LBMA|金银|金矿|银矿|铂矿|钯矿|金条|银条|铂条|钯条|金币|银币|铂币|钯币|金饰|银饰|铂饰|钯饰|\bGold\b|\bSilver\b|\bPlatinum\b|\bPalladium\b|\bRhodium\b|\bRuthenium\b|\bIridium\b|\bOsmium\b|\bPrecious\s+Metals\b|\bXAU\b|\bXAG\b|\bXPT\b|\bXPD\b|\bComex\b|\bNYMEX\b|\bLBMA\b|\bSGE\b|\bGC\b|\bSI\b|\bPL\b|\bPA\b/ => 贵金属相关
 @5
 
+# ═══════════════════════════════════════════════════════════════
+#                         国际局势
+# ═══════════════════════════════════════════════════════════════
 
+[国际局势]
+
+/冲突|战争|战事|交战|开战|停火|入侵|占领|收复|进攻|防御|反击|轰炸|空袭|炮击|导弹|无人机|制裁|禁运|断交|驱逐|抗议|谴责|声明|谈判|斡旋|调停|和解|和平|领土|领海|领空|主权|专属经济区|恐怖|爆炸|人质|劫持|极端|难民|危机|动荡|骚乱|政变|内战|叛乱|起义|分裂|独立|公投|热点|敏感|边境|边界|摩擦|擦枪走火|威胁|核武|生化|化学|生物|常规|军事|军队|部队|兵力|武器|军备|军火|演习|部署|调动|基地|援助|干预|维和|蓝盔|联合国|国际|法庭|台湾|台海|南海|钓鱼岛|乌克兰|俄罗斯|中东|巴以|加沙|叙利亚|伊拉克|阿富汗|朝鲜|伊朗|以色列|哈马斯|真主党|胡塞|库尔德|克什米尔|印巴|也门|利比亚|苏丹|埃塞俄比亚|纳卡|科索沃|克里米亚|顿巴斯|南奥塞梯|阿布哈兹|东乌|西岸|戈兰|福克兰|马岛|直布罗陀|军演|对抗|对峙|紧张|升级|反恐|\bwar\b|\bconflict\b|\bhostilities\b|\bceasefire\b|\btruce\b|\binvasion\b|\boccupation\b|\bannexation\b|\bbombardment\b|\bairstrike\b|\bmissile\b|\bdrone\b|\bsanctions\b|\bembargo\b|\bdiplomacy\b|\bnegotiation\b|\bpeace\b|\bterritory\b|\bsovereignty\b|\bborder\b|\bmilitary\b|\btroop\b|\binsurgency\b|\brebellion\b|\bcoup\b|\bterrorism\b|\bterrorist\b|\battack\b|\bhostage\b|\brefugee\b|\bhumanitarian\b|\bcrisis\b|\bISIS\b|\bISIL\b|\bAl-Qaeda\b|\bTaliban\b|\bHamas\b|\bHezbollah\b|\bHouthi\b|\bPKK\b|\bKashmir\b|\bTaiwan\b|\bCrimea\b|\bDonbas\b|\bGaza\b|\bGolan\b|\bKorea\b|\bIran\b|\bSyria\b|\bIraq\b|\bAfghanistan\b|\bUkraine\b|\bRussia\b|\bChina\b|\bnuclear\b/
+@5
 # ═══════════════════════════════════════════════════════════════
 #                         科技领域
 # ═══════════════════════════════════════════════════════════════
@@ -166,15 +173,9 @@
 /(?<![a-zA-Z])ai(?![a-zA-Z])/
 人工智能
 AI
-/OpenAI|DeepMind|Anthropic|xAI|\bOpenAI\b|\bDeepMind\b|\bAnthropic\b|\bxAI\b|\bGemini\b|\bClaude\b|\bGrok\b|\bLlama\b|\bCopilot\b|\bChatGPT\b|\bDALL·E\b|\bSora\b|\bAlphaFold\b|\bGemma\b|\bQwen\b|智谱|文心一言|通义千问|盘古|混元|商量|日日新|书生|紫东太初|星火|天禧|仇肖莘|任旭阳/
+/大模型|生成式AI|预训练|多模态|文心一言|通义千问|混元|盘古|星火|智谱|百川|豆包|扩散模型|提示工程|微调|对齐|涌现|思维链|智能体|\bLLM\b|\bGPT\b|\bGPT-4\b|\bGPT-3.5\b|\bBERT\b|\bTransformer\b|\bStable Diffusion\b|\bMidjourney\b|\bDALL-E\b|\bSora\b|\bChatGPT\b|\bClaude\b|\bGemini\b|\bLlama\b|\bMinimax\b|\bGLM\b|\bChatGLM\b|\bAIGC\b|\bAGI\b|\bRAG\b|\bCoT\b|\bRLHF\b|\bAgent\b|\bQwen\b|\bBaichuan\b|\bHunyuan\b|\bPangu\b|\bSpark\b|\bDeepSeek\b|\bKimi\b|\bDoubao\b/
 @5
-# ═══════════════════════════════════════════════════════════════
-#                         全网热搜
-# ═══════════════════════════════════════════════════════════════
 
-[全网热搜相关]
-/热搜|热搜榜|热搜话题|微博热搜|百度热搜|抖音热搜|头条热搜|热搜第一|热搜排名/
-@5
 
 # ═══════════════════════════════════════════════════════════════
 #                         黄金诈骗案例
