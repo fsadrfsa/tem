@@ -273,7 +273,7 @@ display:
   standalone:
     platforms: ["zhihu","weibo","douyin","tieba","toutiao"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 5                     # 每个源最多展示条数（0=不限制）
+    max_items: 3                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
