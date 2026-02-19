@@ -321,16 +321,18 @@ presets:
         report_mode: "current"     # 当前在榜的新闻
         # once 继承 default（analyze: true, push: true）→ 只推/分析一次
 
+        collect: true
       late_night:
         name: "深夜汇总"
         start: "22:00"
-        end: "01:00"               # start > end → 自动识别为跨日
+        end: "02:00"               # start > end → 自动识别为跨日
         analyze: true              # AI 做全天汇总分析
         ai_mode: "daily"           # AI 也分析全天内容
         push: true                 # 深夜推送当日完整汇总
         report_mode: "daily"       # 当日全部新闻汇总
         # once 继承 default（analyze: true, push: true）→ 只推/分析一次
 
+        collect: false
     day_plans:
       all_day:
         periods: ["afternoon_peek", "late_night"]
