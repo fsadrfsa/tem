@@ -121,7 +121,7 @@ presets:
 
     # 默认配置 ── 不在任何时间段内时，使用这组开关
     # 因为这个模式没有划分时间段，所以 default 就是全天的行为
-    default:
+    默认:
       collect: true                # 采集数据（爬取热榜 + RSS）
       analyze: false               # 不做 AI 分析（节省 API 费用）
       ai_mode: "current"           # AI 分析当前榜单
@@ -163,7 +163,7 @@ presets:
     description: "全天推送 + 晚间当日汇总。适合大多数人。"
 
     # 默认配置 ── 不命中任何时间段时的行为
-    default:
+    默认:
       collect: true                # 始终采集
       analyze: true                # AI 分析当前榜单
       ai_mode: "current"           # AI 分析当前榜单
@@ -218,7 +218,7 @@ presets:
     name: "办公时间"
     description: "工作日三段式推送（到岗→午间→收工），周末增量自由推送。"
 
-    default:
+    默认:
       collect: true
       analyze: false
       ai_mode: "current"
@@ -313,8 +313,8 @@ presets:
     periods:
       afternoon_peek:
         name: "午后速览"
-        start: "11:00"
-        end: "13:00"
+        start: "15:00"
+        end: "17:00"
         analyze: false              # AI 分析当前热点
         ai_mode: "current"         # AI 分析当前榜单
         push: true                 # 午后看当前热点
@@ -325,7 +325,7 @@ presets:
       late_night:
         name: "深夜汇总"
         start: "22:00"
-        end: "02:00"               # start > end → 自动识别为跨日
+        end: "01:00"               # start > end → 自动识别为跨日
         analyze: true              # AI 做全天汇总分析
         ai_mode: "daily"           # AI 也分析全天内容
         push: true                 # 深夜推送当日完整汇总
