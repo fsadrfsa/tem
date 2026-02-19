@@ -9,7 +9,7 @@
 # 只需在 config.yaml 中选择一个预设模板即可：
 #
 #   schedule:
-#     preset: "morning_evening"    ← 改这里就行
+#     preset: "night_owl"    ← 改这里就行
 #
 #
 # 可视化配置编辑器地址: https://sansan0.github.io/TrendRadar/
@@ -300,7 +300,7 @@ presets:
     name: "夜猫子模式"
     description: "午后速览 + 深夜全天汇总。适合夜间工作者、海外时差用户。"
 
-    default:
+    默认:
       collect: true
       analyze: false
       ai_mode: "current"
@@ -313,9 +313,9 @@ presets:
     periods:
       afternoon_peek:
         name: "午后速览"
-        start: "12:00"
+        start: "11:00"
         end: "13:00"
-        analyze: true              # AI 分析当前热点
+        analyze: false              # AI 分析当前热点
         ai_mode: "current"         # AI 分析当前榜单
         push: true                 # 午后看当前热点
         report_mode: "current"     # 当前在榜的新闻
@@ -324,7 +324,7 @@ presets:
       late_night:
         name: "深夜汇总"
         start: "21:00"
-        end: "22:00"               # start > end → 自动识别为跨日
+        end: "23:50"               # start > end → 自动识别为跨日
         analyze: true              # AI 做全天汇总分析
         ai_mode: "daily"           # AI 也分析全天内容
         push: true                 # 深夜推送当日完整汇总
@@ -398,7 +398,7 @@ custom:
   # 当前时刻不在任何时间段（积木块）内时，使用这组开关。
   # 时间段中没有写的字段，也会回退到这里。
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  default:
+  默认:
     collect: true                  # 是否采集数据（爬取热榜 + RSS）
     analyze: false                 # 是否执行 AI 分析
     ai_mode: "current"            # AI 分析模式:
